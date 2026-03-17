@@ -1,0 +1,58 @@
+package com.example.kaoyanadventure.game.model
+
+enum class Subject {
+    MATH, ENGLISH, POLITICS
+}
+
+enum class TaskType {
+    PROBLEM_SET, ESSAY, READING, MEMORIZATION, REVIEW
+}
+
+enum class TaskStatus {
+    NEW, IN_PROGRESS, COMPLETED, ABANDONED, EXPIRED
+}
+
+enum class Rarity {
+    COMMON, RARE, EPIC
+}
+
+enum class EffectType {
+    // 永久：影响“容量/每日免费刷新/政治可入池/稀有率”
+    PERM_TASK_SLOTS_PLUS_1,
+    PERM_FREE_REROLL_PLUS_1,
+    PERM_ENABLE_SPRINT_MODE,
+    PERM_RARITY_RATE_UP,
+
+    // 消耗：影响“刷新/撤回/延期/保底短任务”
+    CONSUME_REROLL_ONE,
+    CONSUME_REROLL_ALL,
+    CONSUME_WITHDRAW_ONE,
+    CONSUME_DELAY_ONE,
+    CONSUME_SHORT_TASK_GUARANTEE,
+
+    // 消耗：倍率
+    CONSUME_EXP_BOOST_10,
+    CONSUME_EXP_BOOST_20,
+    CONSUME_GOLD_BOOST_10,
+    CONSUME_GOLD_BOOST_20,
+    CONSUME_DROP_RATE_UP,
+
+    // 消耗：连胜相关
+    CONSUME_STREAK_SHIELD,
+    CONSUME_STREAK_REKINDLE,
+    CONSUME_EARLY_BIRD,
+    CONSUME_NIGHT_CLOAK,
+    CONSUME_SOFTCAP_DELAY,
+
+    // 消耗：学习模板（不靠AI判题）
+    CONSUME_REVIEW_TEMPLATE_WRONG,
+    CONSUME_TEMPLATE_ESSAY,
+    CONSUME_TEMPLATE_POLITICS,
+    CONSUME_TEMPLATE_MEMORY,
+    CONSUME_RECAP_COMPASS,
+
+    // 装饰
+    COSMETIC_TITLE,
+    COSMETIC_FRAME,
+    COSMETIC_CAMP_SKIN
+}

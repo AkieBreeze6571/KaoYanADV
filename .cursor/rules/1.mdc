@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+只改必要文件，改动前先说明计划
+
+Android：优先改 app/src/main/...，避免乱动 gradle unless necessary
+
+每次改完：给出改动文件清单 + 关键 diff 摘要 + 如何验证（Run/Logcat/gradle task）
+
+UI 改动：必须说明影响的 Composable/资源名/manifest
